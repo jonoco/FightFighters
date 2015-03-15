@@ -1,0 +1,15 @@
+{
+  "name": "FightFighters",
+  "version": "0.0.1",
+  "description": "A project to easily create competition brackets",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.0"
+  },
+  "repository": {
+    "type": "git"
+    
+  },
+  "author": "Joshua Cox",
+}

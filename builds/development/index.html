@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <title>Fight Fighters</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/lib/jquery-1.11.1.min.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/bracket.js"></script>
+  <script src="js/controllers/welcome.js"></script>
+  <script src="js/controllers/nav.js"></script>
+  <script src="js/services/bracket-service.js"></script>
+  
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top"
+        ng-include="'views/nav.html'" 
+        ng-controller="NavController"></nav>
+    </header>
+    <div class="page">
+      <main ng-view></main>
+    </div>
+</body>
+</html>

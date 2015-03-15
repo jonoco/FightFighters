@@ -1,0 +1,106 @@
+/* Import fonts */
+@import url("http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,700,900|Droid+Sans:400,700");
+
+/* Reset Styles */
+
+ol, ul {
+  list-style: none; }
+
+a img {
+  border: none; 
+}
+
+/* Base Styles */
+
+body {
+  margin-top: 70px;
+  font-family: Merriweather, serif;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #475b62;
+  text-shadow: 1px 1px rgb(255,255,255, 1);
+  margin: 0;
+}
+
+/* Alert and Error styles */
+
+.error {
+  color: #D11404;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #D11404;
+}
+
+.ng-dirty.ng-valid {
+  border-color: #21D153;
+}
+
+.alert {
+  margin-top: 10px;
+}
+
+.alert a {
+  margin-left: 20px;
+}
+
+/* Container styles */
+
+.jumbotron {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.box {
+  background-color: rgba(240, 240, 240, 0.8);
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 3px;
+}
+
+/* Form Styles */
+
+input {
+  color: #475B62;
+  background: rgba(255,255,255,1);
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: 0;
+  padding: 4px;
+}
+
+/* Buttons */
+
+.btn:hover { 
+  background-color: #66CCFF;
+}
+
+/* Navbar */
+
+
+/*
+ * Page styles
+ */
+
+/* Welcome page */
+
+.jumbotron {
+  background-color: rgba(240,240,240,0.8);
+}
+
+.form-horizontal {
+  width: 800px;
+  margin: 14px auto;
+  padding: 14px;
+}
+
+.form-horizontal select {
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+
