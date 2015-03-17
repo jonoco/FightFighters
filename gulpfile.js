@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
   gutil = require('gulp-util'),
-  webserver = require('gulp-webserver');
+  webserver = require('gulp-webserver'),
+  sass = require('gulp-sass');
 
 gulp.task('js', function() {
   gulp.src('builds/development/js/**/*')
@@ -14,9 +15,16 @@ gulp.task('css', function() {
   gulp.src('builds/development/css/*.css')
 });
 
+gulp.task('sass', function() {
+  gulp.src('builds/development/sass/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('builds/development/css'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('builds/development/js/**/*', ['js']);
   gulp.watch('builds/development/css/*.css', ['css']);
+  gulp.watch('builds/development/sass/*.scss', ['sass']);
   gulp.watch(['builds/development/*.html',
     'builds/development/views/*.html'], ['html']);
 });
@@ -29,4 +37,4 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'css', 'webserver']);
+gulp.task('default', ['watch', 'html', 'js', 'css', 'sass', 'webserver']);
