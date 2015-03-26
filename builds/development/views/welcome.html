@@ -4,28 +4,10 @@
 		<p>Create competition brackets easily and quickly</p>
 	</div><!-- jumbotron -->
 	<div class="container">
-		<form name="myForm" class="form-horizontal box" novalidate>
-			<div class="form-group">
-				<label class="control-label">Number of participants</label>
-				<select name="number" class="form-control"
-					ng-model="bracket.number">
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div><!-- form-group -->
-			<div class="form-group">
-				<label class="control-label">Rules</label>
-				<select name="rule" class="form-control"
-					ng-model="bracket.rule">
-					<option value="single">single elimination</option>
-					<option value="double">double elimination</option>
-				</select>  
-	      <button class="btn btn-primary" type="button" 
-	        ng-click="makeBracket()" 
-	        ng-disabled="myForm.$invalid">
-	        Make!</button>
-    	</div><!-- form-group -->
-		</form>
+		<div class="welcome">
+			<a class="btn" href="#/login">Log in</a>	
+			<a class="btn" href="#/register">Register</a>	
+			<a class="btn" href="#/search">Sign in to event</a>	
+		</div><!-- welcome -->
 	</div><!-- container -->
 </section>

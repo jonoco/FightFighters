@@ -1,0 +1,12 @@
+.jumbotron {
+  @extend .box;
+}
+
+.box {
+  background-color: rgba(240, 240, 240, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 3px;
+}

@@ -1,0 +1,42 @@
+<section>
+<div class="container">
+  <div class="register">
+    <form name="myform"
+      ng-submit="register()"
+      novalidate>
+
+      <h1>Register</h1>
+
+      <p class="error" ng-show="message">{{ message }}</p>
+
+      <div class="form-group">
+        <label for="regEmail">email</label>
+        <input type="email" name="email" placeholder="Email" class="form-control" id="regEmail"
+          ng-model="user.email" ng-required="true">
+        <p class="error"
+          ng-show="myform.email.$invalid && myform.email.$touched">must be a valid email</p>
+      </div>
+
+      <div class="form-group">
+        <label for="regPass">password</label>
+        <input type="password" name="password" placeholder="Password" class="form-control" id="regPass"
+          ng-model="user.password" ng-required="true">
+        <p class="error"
+          ng-show="myform.password.$invalid && myform.password.$touched">password is required</p>
+      </div>
+
+      <div class="form-group">
+        <label for="regConfirm">confirm password</label>
+        <input type="password" name="confirm" placeholder="Confirm password" class="form-control" id="regConfirm"
+          ng-model="user.confirm" ng-required="true" compare-to="user.password">
+        <p class="error"
+          ng-show="myform.confirm.$invalid && myform.confirm.$touched">passwords do not match</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+        ng-disabled="myform.$invalid">Sign Up</button>
+      <p>or <a href="#/login">login</a></p>
+    </form>
+  </div>
+</div>
+</section>  
