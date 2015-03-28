@@ -3,28 +3,43 @@ myApp.controller('UserController',
 
   var ref = new Firebase( FIREBASE_URL );
   var authObj = $firebaseAuth( ref );
-  var authData = authObj.$getAuth();
+  var authData = authObj.$getAuth()
 
   if (authData) {
-		var ref = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events' );
-		var eventAry = $firebaseArray( ref );
-    var eventObj = $firebaseObject( ref );
+		var userRef = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events' );
+    var eventRef = new Firebase( FIREBASE_URL + '/events' );
+		var userAry = $firebaseArray( userRef );
 
-    eventObj.$loaded().then(function( data ) {
-      $scope.events = eventObj;
+    userAry.$loaded().then(function( data ) {
+      $scope.events = [];
+      for (event in userAry) {
+        // add to events
+      }
     }); // user events loaded
 
     $scope.deleteEvent = function( id ) {
-       var event = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events/' + id );
+       var user = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events/' + id );
+       var event = new Firebase( FIREBASE_URL + '/events/' + id );
+       user.remove();
        event.remove();
     }
 
 		$scope.addEvent = function() {
-      eventAry.$add({
-        name: $scope.eventName,
-        date: Firebase.ServerValue.TIMESTAMP
-      }).then(function() {
-        $scope.eventName = '';
+      var newRef = userRef.push({added: Firebase.ServerValue.TIMESTAMP});
+
+      var myEvent = {
+        name: $scope.event.name,
+        location: $scope.event.location,
+        date: $scope.event.date,
+        added: Firebase.ServerValue.TIMESTAMP
+      };
+
+      var eventKey = newRef.key();
+      eventRef.child(eventKey).set(myEvent, function() {
+        $scope.event.name = '';
+        $scope.event.location = '';
+        $scope.event.date = '';
+        $('#eventModal').modal('hide');
       });
     } // addevent
 	} else {

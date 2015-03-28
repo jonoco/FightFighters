@@ -1,31 +1,64 @@
 <section>
 <div class="container">
 	<div class="user">
-		<form name="myform" 
-			ng-submit="addEvent()" novalidate>
-			<h1>make a new event</h1>
-			<div class="input-group">
-				<input type="text" name="eventName" placeholder="event name" class="form-control" 
-					ng-model="eventName" 
-					ng-required="true">
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="submit"
-						ng-disabled="myform.$invalid">make event</button>	
-				</span>
-			</div><!-- input-group -->
-		</form>		
-		
+		<h1>make a new event</h1>
+		<button class="btn btn-default" data-toggle="modal" data-target="#eventModal">New Event</button>	
 		<div class="events">
-			<h1>my events</h1>
-			<div class="event" ng-repeat="(key, event) in events">
-				<a class="pull-left" ng-href="#/event/{{key}}"><h2>{{event.name}}</h2></a>
+			<h2>my events</h2>
+			<div class="event" ng-repeat="event in events">
+				<a class="event-name" ng-href="/event/{{event.$id}}"><h2>{{event.name}}</h2></a>
 				<div class="button-group">
-					<a class="btn btn-danger" role='button' ng-click="deleteevent(event.$id)">delete</a>
-					<a class="btn btn-default" ng-href="/event/{{key}}">edit</a>
-					<a class="btn btn-primary" ng-href="/review/{{key}}">register link</a>
+					<a class="btn btn-danger" role='button' ng-click="deleteEvent(event.$id)">delete</a>
+					<a class="btn btn-default" ng-href="/event/{{event.$id}}">edit</a>
+					<a class="btn btn-primary" ng-href="/signin/{{event.$id}}"ng-disabled="true">sign in link</a>
 				</div><!-- button-group -->
+				<div class="clearfix"></div>
 			</div><!-- event -->
 		</div><!-- events -->
 	</div><!-- user -->
 </div><!-- container -->
+<div class="modal fade" id="eventModal">
+	<div class="modal-dialogue">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1>Create a new event</h1>
+			</div><!-- modal-header -->
+
+			<div class="modal-body">
+				<form class="form-horizontal" ng-submit="addEvent()">
+					<div class="form-group">
+						<label for="eventName" class="col-sm-2 control-label">Event Name</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" placeholder="name" id="eventName" 
+								ng-model="event.name" required autofocus>	
+						</div><!-- col-sm-10 -->
+					</div><!-- form-group -->
+
+					<div class="form-group">
+						<label for="eventLocation" class="col-sm-2 control-label">Location</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" placeholder="location" id="eventLocation" 
+								ng-model="event.location" required>
+						</div><!-- col-sm-10 -->
+					</div><!-- form-group -->
+
+					<div class="form-group">
+						<label for="eventDate" class="col-sm-2 control-label">Date</label>
+						<div class="col-sm-10">
+							<input type="date" class="form-control" placeholder="date" id="eventDate" 
+								ng-model="event.date" required>	
+						</div><!-- col-sm-10 -->
+					</div><!-- form-group -->
+					<div class="button-group">
+						<button type="submit" class="btn btn-primary">Make</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+					</div><!-- button-group -->
+				</form>	
+			</div><!-- modal-body -->
+
+		</div><!-- modal-content -->
+	</div><!-- modal-dialogue -->
+</div><!-- modal fade -->
+
 </section>
