@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', 
   ['ngRoute', 'firebase'])
-  .constant('FIREBASE_URL', 'https://?.firebaseio.com/');
+  .constant('FIREBASE_URL', 'https://fightfighter.firebaseio.com/');
 
 //var appControllers = angular.module('appControllers', []);
 
@@ -9,6 +9,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
   .when('/', {
     templateUrl: 'views/welcome.html',
     controller:  'WelcomeController'  
+  })
+  .when('/user', {
+    templateUrl: 'views/user.html',
+    controller: 'UserController'
   })
   .when('/bracket', {
   	templateUrl: 'views/bracket.html',

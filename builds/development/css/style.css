@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,700,900|Droid+Sans:400,700");
 ol, ul {
   list-style: none; }
 
@@ -7,12 +6,11 @@ a img {
 
 body {
   margin-top: 70px;
-  font-family: Merriweather, serif;
   font-size: 1em; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #475b62;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px #eee;
   margin: 0; }
 
 input {
@@ -24,9 +22,9 @@ input {
   padding: 4px; }
 
 .btn:hover {
-  background-color: #66CCFF; }
+  background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login {
+.box, .jumbotron, .welcome, .register, .login, .user, .event {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
   margin: 0 auto;
@@ -62,3 +60,19 @@ input {
 
 .login {
   padding: 10px; }
+
+.user {
+  padding: 10px; }
+  .user h1 {
+    margin: 5px auto; }
+
+.event {
+  background-color: rgba(199, 199, 199, 0.8);
+  margin: 8px auto; }
+  .event h2 {
+    float: left;
+    margin-left: 6px; }
+  .event .button-group {
+    float: right; }
+
+/* Modal styles */

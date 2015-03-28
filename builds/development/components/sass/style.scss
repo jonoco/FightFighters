@@ -44,4 +44,31 @@
   padding: 10px;
 }
 
+.user {
+  @extend .box;
+  padding: 10px;
+  h1 {
+    margin: 5px auto;
+  }
+}
+
+.event {
+  @extend .box;
+  background-color: darken($grey, 16%);
+  margin: 8px auto;
+  h2 { 
+    float: left;
+    margin-left: 6px;
+  }
+  .button-group { float: right; }
+}
+
+/* Modal styles */
+
+.modal {
+  //padding: 10px;
+}
+
+
+
 

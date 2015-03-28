@@ -46,9 +46,5 @@ myApp.factory('Authentication',
 
   } //myObject
 
-  $rootScope.signedIn = function() {
-    return myObject.signedIn();
-  } //add the function to the rootScope
-
   return myObject;
 });
