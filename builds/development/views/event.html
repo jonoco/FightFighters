@@ -1,0 +1,36 @@
+<section>
+<div class="container">
+	<div class="event-info">
+		<h1>{{event.name}}</h1>	
+		<a ng-href="#/signup/{{userId}}/{{eventId}}" class="btn btn-default">Sign up for event</a>
+		<p>Location: {{event.location}}</p>
+		<p>Date: {{event.date}}</p>
+	</div><!-- event-info -->
+</div><!-- container -->
+<div class="container">
+	<div class="event-participants">
+		<table class="table">
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
+				<th>Weight</th>
+				<th>Rank</th>
+				<th>Sex</th>
+				<th ng-show="loggedIn">Edit</th>
+			</thead>
+			<tbody>
+				<tr class="participant" ng-repeat="user in participants">
+					<td>{{user.firstName}}</td>
+					<td>{{user.lastName}}</td>
+					<td>{{user.age}}</td>
+					<td>{{user.weight}}</td>
+					<td>{{user.rank}}</td>
+					<td>{{user.sex}}</td>
+					<td ng-show="loggedIn"><a ng-href="#/">Edit</a></td>
+				</tr><!-- participant -->
+			</tbody>
+		</table><!-- table -->
+	</div><!-- event-participants -->
+</div><!-- container -->
+</section>

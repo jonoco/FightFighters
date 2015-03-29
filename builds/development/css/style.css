@@ -24,7 +24,7 @@ input {
 .btn:hover {
   background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login, .user, .event {
+.box, .jumbotron, .welcome, .register, .login, .user, .event, .event-info, .event-participants, .signup {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
   margin: 0 auto;
@@ -75,4 +75,28 @@ input {
   .event .button-group {
     float: right; }
 
+.event-info {
+  padding: 10px;
+  font-size: 1.4rem; }
+  .event-info a {
+    margin: 5px auto; }
+
+.event-participants {
+  background-color: #fff;
+  border: 1px solid rgba(240, 240, 240, 0.8);
+  margin-top: 6px;
+  padding: 10px; }
+  .event-participants td {
+    text-align: left; }
+  .event-participants tr:nth-child(even) {
+    background: rgba(240, 240, 240, 0.8); }
+
 /* Modal styles */
+.signup {
+  padding: 10px; }
+  .signup h1 {
+    margin: 6px auto; }
+  .signup .radio-inline {
+    font-size: 1.2rem;
+    float: left;
+    margin-right: 10px; }

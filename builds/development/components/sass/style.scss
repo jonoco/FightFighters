@@ -63,11 +63,38 @@
   .button-group { float: right; }
 }
 
+.event-info {
+  @extend .box;
+  padding: 10px;
+  font-size: 1.4rem;
+  a { margin: 5px auto; }
+}
+
+.event-participants {
+  @extend .box;
+  background-color: #fff;
+  border: 1px solid $grey;
+  margin-top: 6px;
+  padding: 10px;
+  td { text-align: left;}
+  tr {
+    &:nth-child(even) { background: $grey; }
+  }
+}
 /* Modal styles */
 
-.modal {
-  //padding: 10px;
+.signup {
+  @extend .box;
+  padding: 10px;
+  h1 { margin: 6px auto; }
+  .radio-inline {
+    font-size: 1.2rem;
+    float: left;
+    margin-right: 10px;
+  }
 }
+
+
 
 
 

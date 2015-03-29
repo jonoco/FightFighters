@@ -6,11 +6,11 @@
 		<div class="events">
 			<h2>my events</h2>
 			<div class="event" ng-repeat="event in events">
-				<a class="event-name" ng-href="/event/{{event.$id}}"><h2>{{event.name}}</h2></a>
+				<a class="event-name" ng-href="#/event/{{userId}}/{{event.$id}}"><h2>{{event.name}}</h2></a>
 				<div class="button-group">
 					<a class="btn btn-danger" role='button' ng-click="deleteEvent(event.$id)">delete</a>
-					<a class="btn btn-default" ng-href="/event/{{event.$id}}">edit</a>
-					<a class="btn btn-primary" ng-href="/signin/{{event.$id}}"ng-disabled="true">sign in link</a>
+					<a class="btn btn-default" ng-href="#/event/{{userId}}/{{event.$id}}/edit">edit</a>
+					<a class="btn btn-primary" ng-href="#/signup/{{userId}}/{{event.$id}}">sign up link</a>
 				</div><!-- button-group -->
 				<div class="clearfix"></div>
 			</div><!-- event -->
@@ -26,7 +26,8 @@
 			</div><!-- modal-header -->
 
 			<div class="modal-body">
-				<form class="form-horizontal" ng-submit="addEvent()">
+				<form class="form-horizontal" 
+					ng-submit="addEvent()">
 					<div class="form-group">
 						<label for="eventName" class="col-sm-2 control-label">Event Name</label>
 						<div class="col-sm-10">
@@ -46,7 +47,7 @@
 					<div class="form-group">
 						<label for="eventDate" class="col-sm-2 control-label">Date</label>
 						<div class="col-sm-10">
-							<input type="date" class="form-control" placeholder="date" id="eventDate" 
+							<input type="text" class="form-control" placeholder="date" id="eventDate" 
 								ng-model="event.date" required>	
 						</div><!-- col-sm-10 -->
 					</div><!-- form-group -->
@@ -60,5 +61,4 @@
 		</div><!-- modal-content -->
 	</div><!-- modal-dialogue -->
 </div><!-- modal fade -->
-
 </section>

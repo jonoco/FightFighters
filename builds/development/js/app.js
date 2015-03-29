@@ -12,19 +12,31 @@ myApp.config(['$routeProvider', function($routeProvider) {
   })
   .when('/user', {
     templateUrl: 'views/user.html',
-    controller: 'UserController'
+    controller:  'UserController'
   })
   .when('/bracket', {
   	templateUrl: 'views/bracket.html',
-  	controller: 'BracketController'
+  	controller:  'BracketController'
   })
   .when('/login', {
     templateUrl: 'views/login.html',
-    controller: 'RegistrationController'
+    controller:  'RegistrationController'
   })
   .when('/register', {
     templateUrl: 'views/register.html',
-    controller: 'RegistrationController'
+    controller:  'RegistrationController'
+  })
+  .when('/event/:userId/:eventId', {
+    templateUrl: 'views/event.html',
+    controller:  'EventController'
+  })
+  .when('/event/:userId/:eventId/edit', {
+    templateUrl: 'views/event-edit.html',
+    controller:  'EventController'
+  })
+  .when('/signup/:userId/:eventId', {
+    templateUrl: 'views/event-signup.html',
+    controller:  'SignupController'
   })
   .otherwise({
       redirectTo: '/'
