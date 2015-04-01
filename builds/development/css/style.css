@@ -24,10 +24,10 @@ input {
 .btn:hover {
   background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login, .user, .event, .event-info, .event-participants, .signup {
+.box, .jumbotron, .welcome, .register, .login, .user, .event, .event-info, .event-participants, .edit-divisions, .make-divisions, .event-edit, .signup, .search {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   border-radius: 6px;
   box-shadow: 3px; }
@@ -91,6 +91,25 @@ input {
   .event-participants tr:nth-child(even) {
     background: rgba(240, 240, 240, 0.8); }
 
+.edit-divisions td {
+  text-align: left; }
+
+.make-divisions {
+  padding: 10px; }
+  .make-divisions h1 {
+    margin-bottom: 10px; }
+  .make-divisions input {
+    width: 45%;
+    float: left;
+    margin-right: 5px; }
+  .make-divisions .radio-inline {
+    float: left; }
+
+.event-edit {
+  padding: 10px; }
+  .event-edit h1 {
+    margin-bottom: 10px; }
+
 /* Modal styles */
 .signup {
   padding: 10px; }
@@ -100,3 +119,14 @@ input {
     font-size: 1.2rem;
     float: left;
     margin-right: 10px; }
+
+.search {
+  padding: 10px; }
+  .search label {
+    font-size: 1.4rem; }
+  .search input {
+    width: 50%;
+    margin: 6px auto; }
+  .search select {
+    width: 50%;
+    margin: 0 auto; }

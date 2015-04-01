@@ -1,6 +1,8 @@
 <section>
 <div class="container">
-	<h1>{{event.name}}</h1>
-
+	<div class="event-edit">
+		<h1><a ng-href="#/event/{{userId}}/{{eventId}}">{{event.name}}</a></h1>
+		<a ng-href="#/event/{{userId}}/{{eventId}}/edit/divisions" class="btn btn-default">Edit Divisions</a>
+	</div><!-- event-edit -->
 </div><!-- container -->
 </section>

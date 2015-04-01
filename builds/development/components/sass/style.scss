@@ -81,6 +81,29 @@
     &:nth-child(even) { background: $grey; }
   }
 }
+
+.edit-divisions {
+  @extend .box;
+  td { text-align: left; }
+}
+
+.make-divisions {
+  @extend .box;
+  padding: 10px;
+  h1 { margin-bottom: 10px; }
+  input { 
+    width: 45%;
+    float: left; 
+    margin-right: 5px;
+  }
+  .radio-inline { float: left; }
+}
+
+.event-edit {
+  @extend .box;
+  padding: 10px;
+  h1 { margin-bottom: 10px; }
+}
 /* Modal styles */
 
 .signup {
@@ -94,6 +117,19 @@
   }
 }
 
+.search {
+  @extend .box;
+  padding: 10px;
+  label { font-size: 1.4rem; }
+  input { 
+    width: 50%; 
+    margin: 6px auto; 
+  }
+  select {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 
 
 

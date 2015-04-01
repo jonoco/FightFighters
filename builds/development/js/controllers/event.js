@@ -1,5 +1,5 @@
 myApp.controller('EventController', function(
-	$scope, $firebaseObject, $firebaseArray, $firebaseAuth, $location, $routeParams, FIREBASE_URL) {
+	$scope, Division, $firebaseObject, $firebaseArray, $firebaseAuth, $location, $routeParams, FIREBASE_URL) {
 
 	$scope.eventId = $routeParams.eventId;
 	$scope.userId = $routeParams.userId;
@@ -26,4 +26,8 @@ myApp.controller('EventController', function(
 	prtAry.$loaded().then(function() {
 		$scope.participants = prtAry;
 	});
+
+	$scope.division = function() {
+		Division.division($scope.userId, $scope.eventId);
+	}
 });

@@ -13,18 +13,20 @@ myApp.controller('SignupController', function(
 	});
 
 	$scope.signup = function() {
-		var myData = {
+		var participant = {
 			firstName: $scope.user.firstName,
 			lastName: $scope.user.lastName,
 			age: $scope.user.age,
 			weight: $scope.user.weight,
 			rank: $scope.user.rank,
-			sex: $scope.user.sex
+			sex: $scope.user.sex,
+			division: 'No division'
 		};
 
-		signRef.push(myData, function() {
+		signRef.push(participant, function() {
 			$location.path('/event/' + $scope.userId + '/' + $scope.eventId);
 			$scope.$apply();
 		});
 	};
 });
+

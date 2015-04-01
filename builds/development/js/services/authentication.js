@@ -42,7 +42,11 @@ myApp.factory('Authentication',
 
     signedIn: function() {
       return authObj.user != null;
-    } //signedIn
+    }, //signedIn
+
+    user : function() {
+      return authObj.$getAuth().uid;
+    } //user
 
   } //myObject
 

@@ -34,6 +34,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'views/event-edit.html',
     controller:  'EventController'
   })
+  .when('/event/:userId/:eventId/edit/divisions', {
+    templateUrl: 'views/event-divisions.html',
+    controller:  'EditorController'
+  })
   .when('/signup/:userId/:eventId', {
     templateUrl: 'views/event-signup.html',
     controller:  'SignupController'
