@@ -3,9 +3,29 @@
 	<div class="event-info">
 		<h1>{{event.name}}</h1>	
 		<a ng-href="#/signup/{{userId}}/{{eventId}}" class="btn btn-default">Sign up for event</a>
+		<a ng-href="#/event/{{userId}}/{{eventId}}/edit" class="btn btn-default">Edit event</a>
+		<button class="btn btn-default" 
+			ng-show="loggedIn"
+			ng-click="division()">Divide</button>
 		<p>Location: {{event.location}}</p>
 		<p>Date: {{event.date}}</p>
 	</div><!-- event-info -->
+</div><!-- container -->
+<div class="container">
+	<div class="search">
+		<label for="">Search</label>
+		<input type="text" class="form-control" placeholder="Search by name, age, rank..." 
+			ng-model="list.search">
+		<label for="">Order by</label>
+		<select class="form-control" ng-model="list.order">
+		  <option ng-selected="true" value="lastName">Last Name</option>
+		  <option value="age">Age</option>
+		  <option value="weight">Weight</option>
+		  <option value="rank">Rank</option>
+		  <option value="sex">Sex</option>
+		  <option value="divsion">Division</option>
+		</select>
+	</div><!-- search -->
 </div><!-- container -->
 <div class="container">
 	<div class="event-participants">
@@ -17,16 +37,18 @@
 				<th>Weight</th>
 				<th>Rank</th>
 				<th>Sex</th>
+				<th>Division</th>
 				<th ng-show="loggedIn">Edit</th>
 			</thead>
 			<tbody>
-				<tr class="participant" ng-repeat="user in participants">
+				<tr class="participant" ng-repeat="user in participants | filter: list.search | orderBy: list.order">
 					<td>{{user.firstName}}</td>
 					<td>{{user.lastName}}</td>
 					<td>{{user.age}}</td>
 					<td>{{user.weight}}</td>
 					<td>{{user.rank}}</td>
 					<td>{{user.sex}}</td>
+					<td>{{user.division}}</td>
 					<td ng-show="loggedIn"><a ng-href="#/">Edit</a></td>
 				</tr><!-- participant -->
 			</tbody>
