@@ -26,6 +26,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'views/register.html',
     controller:  'RegistrationController'
   })
+  .when('/event', {
+    templateUrl: 'views/directory.html',
+    controller:  'DirectoryController'
+  })
   .when('/event/:userId/:eventId', {
     templateUrl: 'views/event.html',
     controller:  'EventController'
@@ -36,6 +40,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
   })
   .when('/event/:userId/:eventId/edit/divisions', {
     templateUrl: 'views/event-divisions.html',
+    controller:  'EditorController'
+  })
+  .when('/event/:userId/:eventId/edit/brackets', {
+    templateUrl: 'views/event-brackets.html',
     controller:  'EditorController'
   })
   .when('/signup/:userId/:eventId', {

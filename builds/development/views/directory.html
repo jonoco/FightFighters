@@ -1,0 +1,16 @@
+<section>
+<div class="container">
+	<div class="directory">
+		<h1>All Current Events</h1>
+		<div ng-repeat="(key, event) in directory">
+			<div ng-repeat="(key, field) in event">
+				<h2><a ng-href="#/event/{{field.creator}}/{{key}}">{{field.name}}</h2></a>
+				<label>Location</label>
+				<span>{{field.location}}</span>
+				<label>Date</label>
+				<span>{{field.date}}</span>
+			</div><!-- repeat.event -->
+		</div><!-- repeat.directory -->	
+	</div><!-- directory -->		
+</div><!-- container -->
+</section>

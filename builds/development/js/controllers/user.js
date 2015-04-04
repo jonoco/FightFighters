@@ -25,7 +25,7 @@ myApp.controller('UserController',
         creator: authData.uid,
         name: $scope.event.name,
         location: $scope.event.location,
-        date: $scope.event.date,
+        date: $scope.event.date.toString(),
         added: Firebase.ServerValue.TIMESTAMP
       };
 

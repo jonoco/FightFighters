@@ -40,12 +40,9 @@ myApp.factory('Authentication',
       return authObj.$unauth();
     }, //logout
 
-    signedIn: function() {
-      return authObj.user != null;
-    }, //signedIn
-
     user : function() {
-      return authObj.$getAuth().uid;
+      var user = authObj.$getAuth();
+      return user ? user.uid : false;
     } //user
 
   } //myObject

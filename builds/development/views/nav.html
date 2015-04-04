@@ -6,8 +6,9 @@
 		<ul class="nav navbar-nav">
 		  <li ng-hide="loggedIn"><a class="btn btn-default" ng-href="#/login">Login</a></li>
 		  <li ng-hide="loggedIn"><a class="btn btn-default" ng-href="#/register">Register</a></li>
-			<li ng-show="loggedIn"><a class="btn btn-default" ng-href="#/user">Events</a></li>
+			<li ng-show="loggedIn"><a class="btn btn-default" ng-href="#/user">My Events</a></li>
 			<li ng-show="loggedIn"><a class="btn btn-default" ng-click="logout()">Logout</a></li>
+			<li><a class="btn btn-default" ng-href="#/event">All Events</a></li>
 		</ul><!-- navbar-nav -->
 	</div><!-- collapse -->
 </div><!-- container-fluid -->

@@ -1,5 +1,5 @@
 myApp.controller('SignupController', function(
-	$scope, $firebaseObject, $firebaseArray, $firebaseAuth, $location, $routeParams, FIREBASE_URL) {
+	$scope, $firebaseObject, $location, $routeParams, FIREBASE_URL) {
 
 	$scope.eventId = $routeParams.eventId;
 	$scope.userId = $routeParams.userId;

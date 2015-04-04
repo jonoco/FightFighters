@@ -52,7 +52,7 @@
   }
 }
 
-.event {
+.events {
   @extend .box;
   background-color: darken($grey, 16%);
   margin: 8px auto;
@@ -61,13 +61,24 @@
     margin-left: 6px;
   }
   .button-group { float: right; }
+
 }
 
-.event-info {
-  @extend .box;
-  padding: 10px;
-  font-size: 1.4rem;
-  a { margin: 5px auto; }
+.event {
+  > div {
+    @extend .box;
+    padding: 10px;
+    font-size: 1.4rem
+  }
+  a { margin: 5px auto; }  
+  input { 
+    width: 50%; 
+    margin: 6px auto; 
+  }
+  select {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .event-participants {
@@ -104,7 +115,6 @@
   padding: 10px;
   h1 { margin-bottom: 10px; }
 }
-/* Modal styles */
 
 .signup {
   @extend .box;
@@ -117,17 +127,12 @@
   }
 }
 
-.search {
+.directory {
   @extend .box;
   padding: 10px;
-  label { font-size: 1.4rem; }
-  input { 
-    width: 50%; 
-    margin: 6px auto; 
-  }
-  select {
-    width: 50%;
-    margin: 0 auto;
+  div:nth-child(even) {
+    @extend .box;
+    background-color: #fff;
   }
 }
 

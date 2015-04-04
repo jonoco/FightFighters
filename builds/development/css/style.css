@@ -11,7 +11,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #475b62;
   text-shadow: 1px 1px #eee;
-  margin: 0; }
+  margin: 0 0 10px 0; }
 
 input {
   color: #475B62;
@@ -24,7 +24,7 @@ input {
 .btn:hover {
   background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login, .user, .event, .event-info, .event-participants, .edit-divisions, .make-divisions, .event-edit, .signup, .search {
+.box, .jumbotron, .welcome, .register, .login, .user, .events, .event > div, .event-participants, .edit-divisions, .make-divisions, .event-edit, .signup, .directory, .directory div:nth-child(even) {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
   margin: 10px auto;
@@ -66,20 +66,26 @@ input {
   .user h1 {
     margin: 5px auto; }
 
-.event {
+.events {
   background-color: rgba(199, 199, 199, 0.8);
   margin: 8px auto; }
-  .event h2 {
+  .events h2 {
     float: left;
     margin-left: 6px; }
-  .event .button-group {
+  .events .button-group {
     float: right; }
 
-.event-info {
+.event > div {
   padding: 10px;
   font-size: 1.4rem; }
-  .event-info a {
-    margin: 5px auto; }
+.event a {
+  margin: 5px auto; }
+.event input {
+  width: 50%;
+  margin: 6px auto; }
+.event select {
+  width: 50%;
+  margin: 0 auto; }
 
 .event-participants {
   background-color: #fff;
@@ -110,7 +116,6 @@ input {
   .event-edit h1 {
     margin-bottom: 10px; }
 
-/* Modal styles */
 .signup {
   padding: 10px; }
   .signup h1 {
@@ -120,13 +125,7 @@ input {
     float: left;
     margin-right: 10px; }
 
-.search {
+.directory {
   padding: 10px; }
-  .search label {
-    font-size: 1.4rem; }
-  .search input {
-    width: 50%;
-    margin: 6px auto; }
-  .search select {
-    width: 50%;
-    margin: 0 auto; }
+  .directory div:nth-child(even) {
+    background-color: #fff; }
