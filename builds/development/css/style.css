@@ -24,7 +24,7 @@ input {
 .btn:hover {
   background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login, .user, .events, .event > div, .event-participants, .edit-divisions, .make-divisions, .event-edit, .signup, .directory, .directory div:nth-child(even) {
+.box, .jumbotron, .welcome, .register, .login, .user, .events, .event > div, .event-participants, .edit-divisions, .event-divisions, .event-edit, .signup, .directory, .directory div:nth-child(even), .event-brackets {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
   margin: 10px auto;
@@ -100,16 +100,20 @@ input {
 .edit-divisions td {
   text-align: left; }
 
-.make-divisions {
+.event-divisions {
   padding: 10px; }
-  .make-divisions h1 {
+  .event-divisions h1 {
     margin-bottom: 10px; }
-  .make-divisions input {
+  .event-divisions label {
+    font-size: 1.4rem; }
+  .event-divisions input {
     width: 45%;
     float: left;
     margin-right: 5px; }
-  .make-divisions .radio-inline {
+  .event-divisions .checkbox-inline {
     float: left; }
+    .event-divisions .checkbox-inline input {
+      width: 14px; }
 
 .event-edit {
   padding: 10px; }
@@ -129,3 +133,9 @@ input {
   padding: 10px; }
   .directory div:nth-child(even) {
     background-color: #fff; }
+
+.event-brackets td {
+  text-align: left; }
+
+#divisionModal {
+  font-size: 1.4rem; }

@@ -98,16 +98,22 @@
   td { text-align: left; }
 }
 
-.make-divisions {
+.event-divisions {
   @extend .box;
   padding: 10px;
   h1 { margin-bottom: 10px; }
+  label { font-size: 1.4rem; }
   input { 
     width: 45%;
     float: left; 
     margin-right: 5px;
   }
-  .radio-inline { float: left; }
+  .checkbox-inline {
+    float: left;
+    input {
+      width: 14px;  
+    }
+  }  
 }
 
 .event-edit {
@@ -136,7 +142,16 @@
   }
 }
 
+.event-brackets {
+  @extend .box;
+  td {
+    text-align: left;
+  }
+}
 
+#divisionModal {
+  font-size: 1.4rem;
+}
 
 
 

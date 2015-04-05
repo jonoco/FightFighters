@@ -20,5 +20,11 @@ myApp.controller('EventController', function(
 
 	$scope.division = function() {
 		Division.division($scope.userId, $scope.eventId);
+	};
+
+	$scope.bracket = function() {
+		//assign bracket to a division
+		//for each division that is being assigned, iter thru
+		//and find a bracket for each, marking division as status:assigned
 	}
 });

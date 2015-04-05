@@ -1,6 +1,13 @@
 myApp.service('Division', 
 	function( $firebaseObject, $firebaseArray, FIREBASE_URL ) {
 
+	function present(value, list) {
+		for (var i = 0; i < list.length; i++) {
+			if (value == list[i]) { return true };
+		};
+		return false;
+	};
+
 	var myObject = {
 		division : function(user, event) {
 			//take list of participants, 
@@ -16,8 +23,8 @@ myApp.service('Division',
 					angular.forEach(divisions, function( div ) {
 						if ( fighter.weight > div.minWeight && fighter.weight < div.maxWeight &&
 								 fighter.age > div.minAge && fighter.age < div.maxAge &&
-						 		 fighter.rank == div.rank && fighter.sex == div.sex ) {
-							
+						 		 fighter.rank == div.rank && present(fighter.sex, div.sex) ) {
+							//change rank and sex to lists, check fighter.rank in div.ranks
 							fighter.division = div.name;
 							participants.$save(fighter).then(function() {
 								console.log(fighter.firstName + ' ' + fighter.lastName + ' division updated to ' + div.name);
@@ -27,7 +34,7 @@ myApp.service('Division',
 				});// participants
 			});// assumption that participants array will load with or after divisions
 		}// division()
-	}// myObject
+	};// myObject
 
 	return myObject;
 
