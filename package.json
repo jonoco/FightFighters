@@ -1,6 +1,6 @@
 {
   "name": "FightFighters",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A project to easily create competition brackets",
   "devDependencies": {
     "gulp": "^3.8.11",
