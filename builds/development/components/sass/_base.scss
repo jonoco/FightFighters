@@ -21,3 +21,22 @@ input {
 .btn:hover { 
   background-color: darken($grey, 36%);
 }
+
+/* Alert and Error styles */
+
+.error {
+  color: #D11404;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #D11404;
+}
+
+.ng-dirty.ng-valid {
+  border-color: #21D153;
+}
+
+.alert {
+  margin-top: 10px;
+  a { margin-left: 20px; }
+}

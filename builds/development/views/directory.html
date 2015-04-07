@@ -3,8 +3,8 @@
 	<div class="directory">
 		<h1>All Current Events</h1>
 		<div ng-repeat="(key, event) in directory">
-			<div ng-repeat="(key, field) in event">
-				<h2><a ng-href="#/event/{{field.creator}}/{{key}}">{{field.name}}</h2></a>
+			<div class="directory-event" ng-repeat="(key, field) in event">
+				<h2><a ng-href="#/event/{{field.creator}}/{{key}}">{{field.name}}</a></h2>
 				<label>Location</label>
 				<span>{{field.location}}</span>
 				<label>Date</label>

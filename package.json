@@ -4,9 +4,11 @@
   "description": "A project to easily create competition brackets",
   "devDependencies": {
     "gulp": "^3.8.11",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^1.3.3",
     "gulp-util": "^3.0.4",
-    "gulp-webserver": "^0.9.0",
-    "gulp-sass": "^1.3.3"
+    "gulp-webserver": "^0.9.0"
   },
   "repository": {
     "type": "git",

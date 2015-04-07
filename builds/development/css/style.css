@@ -24,13 +24,45 @@ input {
 .btn:hover {
   background-color: rgba(148, 148, 148, 0.8); }
 
-.box, .jumbotron, .welcome, .register, .login, .user, .events, .event > div, .event-participants, .edit-divisions, .event-divisions, .event-edit, .signup, .directory, .directory div:nth-child(even), .event-brackets {
+.box, .jumbotron, .directory, .directory div:nth-child(even), .welcome, .register, .login, .user, .user .user-event, .event > div, .event-participants, .edit-divisions, .event-divisions, .event-edit, .signup, .event-brackets {
   background-color: rgba(240, 240, 240, 0.8);
   max-width: 800px;
   margin: 10px auto;
   text-align: center;
   border-radius: 6px;
   box-shadow: 3px; }
+
+.clear, .user .user-event {
+  overflow: auto; }
+
+.directory {
+  padding: 10px; }
+  .directory div:nth-child(even) {
+    background-color: #fff; }
+
+.welcome {
+  margin-top: 10px; }
+  .welcome button {
+    margin: 10px 0; }
+
+.register {
+  padding: 10px; }
+
+.login {
+  padding: 10px; }
+
+.user {
+  padding: 10px; }
+  .user h1 {
+    margin: 5px auto; }
+  .user .user-event {
+    background-color: rgba(199, 199, 199, 0.8);
+    margin: 8px auto; }
+    .user .user-event h3 {
+      float: left;
+      margin-left: 6px; }
+    .user .user-event .button-group {
+      float: right; }
 
 /* Alert and Error styles */
 .error {
@@ -50,31 +82,6 @@ input {
 /*
  * Page styles
  */
-.welcome {
-  margin-top: 10px; }
-  .welcome button {
-    margin: 10px 0; }
-
-.register {
-  padding: 10px; }
-
-.login {
-  padding: 10px; }
-
-.user {
-  padding: 10px; }
-  .user h1 {
-    margin: 5px auto; }
-
-.events {
-  background-color: rgba(199, 199, 199, 0.8);
-  margin: 8px auto; }
-  .events h2 {
-    float: left;
-    margin-left: 6px; }
-  .events .button-group {
-    float: right; }
-
 .event > div {
   padding: 10px;
   font-size: 1.4rem; }
@@ -128,11 +135,6 @@ input {
     font-size: 1.2rem;
     float: left;
     margin-right: 10px; }
-
-.directory {
-  padding: 10px; }
-  .directory div:nth-child(even) {
-    background-color: #fff; }
 
 .event-brackets td {
   text-align: left; }

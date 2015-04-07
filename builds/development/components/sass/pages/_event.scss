@@ -1,0 +1,20 @@
+.event {
+  > div {
+    @extend .box;
+    font-size: 1.4rem
+  }
+
+  a { margin: 5px auto; }  
+
+  input { 
+    width: 50%; 
+    margin: 6px auto; 
+  }
+
+  select {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  td { text-align: left;}
+} 

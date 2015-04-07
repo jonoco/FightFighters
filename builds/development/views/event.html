@@ -14,8 +14,12 @@
 				ng-show="loggedIn"
 				ng-click="division()">
 				Divide</button>
+			<a ng-href="#/event/{{userId}}/{{eventId}}/edit/divisions" class="btn btn-default">
+				Edit Divisions</a>
+			<a ng-href="#/event/{{userId}}/{{eventId}}/edit/brackets" class="btn btn-default">
+				Edit Brackets</a>
 		</div>
-		<div class="search">
+		<div>
 			<h2>Search</h2>
 			<input type="text" class="form-control" placeholder="Search by name, age, rank..." 
 				ng-model="list.search">
@@ -29,7 +33,8 @@
 			  <option value="divsion">Division</option>
 			</select>
 		</div><!-- search -->
-		<div class="event-participants">
+		<div>
+			<h2>Participants</h2>
 			<table class="table">
 				<thead>
 					<th>First Name</th>
@@ -55,7 +60,7 @@
 					</tr><!-- participant -->
 				</tbody>
 			</table><!-- table -->
-		</div><!-- event-participants -->
+		</div> <!-- participants -->
 	</div><!-- event -->
 </div><!-- container -->
 </section>

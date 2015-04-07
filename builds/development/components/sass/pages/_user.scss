@@ -1,0 +1,18 @@
+.user {
+  @extend .box;
+  padding: 10px;
+  h1 { margin: 5px auto; }
+
+  .user-event {
+	  @extend .box;
+	  @extend .clear;
+	  background-color: darken($grey, 16%);
+	  margin: 8px auto;
+	  h3 { 
+	    float: left;
+	    margin-left: 6px;
+	  }
+	  .button-group { float: right; }
+	}
+}
+

@@ -39,11 +39,11 @@ myApp.config(['$routeProvider', function($routeProvider) {
     controller:  'EventController'
   })
   .when('/event/:userId/:eventId/edit/divisions', {
-    templateUrl: 'views/event-divisions.html',
+    templateUrl: 'views/edit-divisions.html',
     controller:  'EditorController'
   })
   .when('/event/:userId/:eventId/edit/brackets', {
-    templateUrl: 'views/event-brackets.html',
+    templateUrl: 'views/edit-brackets.html',
     controller:  'EditorController'
   })
   .when('/signup/:userId/:eventId', {

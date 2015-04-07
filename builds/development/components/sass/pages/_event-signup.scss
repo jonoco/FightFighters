@@ -1,0 +1,9 @@
+.event-signup {
+  @extend .box;
+  
+  .radio-inline {
+    font-size: 1.2rem;
+    float: left;
+    margin-right: 10px;
+  }
+}

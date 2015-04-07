@@ -6,7 +6,12 @@
   background-color: $grey;
   max-width: 800px;
   margin: 10px auto;
+  padding: 10px;
   text-align: center;
   border-radius: 6px;
   box-shadow: 3px;
+}
+
+.clear {
+	overflow: auto;
 }

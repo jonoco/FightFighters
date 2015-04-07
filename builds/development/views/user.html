@@ -4,8 +4,8 @@
 		<h1>make a new event</h1>
 		<button class="btn btn-default" data-toggle="modal" data-target="#eventModal">New Event</button>	
 		<h2>my events</h2>
-		<div class="events" ng-repeat="event in events">
-			<a class="event-name" ng-href="#/event/{{userId}}/{{event.$id}}"><h2>{{event.name}}</h2></a>
+		<div class="user-event" ng-repeat="event in events">
+			<a class="event-name" ng-href="#/event/{{userId}}/{{event.$id}}"><h3>{{event.name}}</h3></a>
 			<div class="button-group">
 				<a class="btn btn-default" ng-href="#/event/{{userId}}/{{event.$id}}/edit">edit</a>
 				<a class="btn btn-primary" ng-href="#/signup/{{userId}}/{{event.$id}}">sign up link</a>
@@ -13,7 +13,6 @@
 					confirmation-needed="Are you sure you want to delete {{event.name}}?"
 					ng-click="deleteEvent(event.$id)">delete</a>
 			</div><!-- button-group -->
-			<div class="clearfix"></div>
 		</div><!-- events -->
 	</div><!-- user -->
 </div><!-- container -->

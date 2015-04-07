@@ -1,0 +1,26 @@
+<section>
+<div class="container">
+	<div class="edit-brackets">
+		<h1><a ng-href="#/event/{{userId}}/{{eventId}}">{{event.name}}</a></h1>
+		<h2>Manage Brackets</h2>
+		<button class="btn btn-default" data-toggle="modal" data-target="#divisionModal">Assign Brackets</button>
+		<table class="table">
+			<thead>
+				<th>Name</th>
+				<th>Size</th>
+				<th>Bouts Run</th>
+				<th>Status</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="(key, bracket) in event.brackets">
+					<td>{{bracket.name}}</td>
+					<td>{{bracket.members.length}}</td>
+					<td>{{bracket.matches.length}}</td>
+					<td>{{bracket.status}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- event-brackets -->
+</div><!-- container -->
+<division-modal></division-modal>
+</section>

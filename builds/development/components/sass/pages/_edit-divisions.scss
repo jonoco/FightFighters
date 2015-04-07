@@ -1,0 +1,22 @@
+.edit-divisions {
+  > div {
+    @extend .box;  
+  }
+
+  td { text-align: left; }
+
+  label { font-size: 1.4rem; }
+
+  input { 
+    width: 45%;
+    float: left; 
+    margin-right: 5px;
+  }
+
+  .checkbox-inline {
+    float: left;
+    input {
+      width: 14px;  
+    }
+  }  
+}

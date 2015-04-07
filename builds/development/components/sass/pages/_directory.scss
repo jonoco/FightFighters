@@ -1,0 +1,8 @@
+.directory {
+  @extend .box;
+
+  .directory-event {
+    @extend .box;
+    background-color: #ddd;
+  }
+}
