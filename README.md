@@ -1,3 +1,5 @@
 # Fight Fighters
+Registration and tournament management app
+Enables quick and easy division creation
 
-Simple bracket creation app
+(Hosted here)[https://fightfighter.firebaseapp.com/#/]
