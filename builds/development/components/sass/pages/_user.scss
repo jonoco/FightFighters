@@ -1,13 +1,22 @@
 .user {
   @extend .box;
   padding: 10px;
-  h1 { margin: 5px auto; }
+  h1 { margin: 15px auto; }
+  h2 { margin-bottom: 10px; }
+
+  button {margin-bottom: 10px; }
+	
+	.no-events {
+		font-size: 2em;
+		font-weight: 300;
+		color: #48454B;
+	}
 
   .user-event {
 	  @extend .box;
 	  @extend .clear;
-	  background-color: darken($grey, 16%);
-	  margin: 8px auto;
+	  background-color: darken($grey, 10%);
+	  margin: 5px auto;
 	  h3 { 
 	    float: left;
 	    margin-left: 6px;
