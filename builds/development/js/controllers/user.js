@@ -1,5 +1,5 @@
-myApp.controller('UserController', 
-	function($scope, $firebaseObject, $firebaseArray, $firebaseAuth, $location, FIREBASE_URL) {
+myApp.controller('UserController', ['$scope', '$firebaseObject', '$firebaseArray', '$firebaseAuth', '$location', 'FIREBASE_URL',
+  function($scope, $firebaseObject, $firebaseArray, $firebaseAuth, $location, FIREBASE_URL) {
 
   var ref = new Firebase( FIREBASE_URL );
   var authObj = $firebaseAuth( ref );
@@ -8,8 +8,8 @@ myApp.controller('UserController',
   if (authData) {
     $scope.userId = authData.uid;
     
-		var userRef = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events' );
-		var eventAry = $firebaseArray( userRef );
+    var userRef = new Firebase( FIREBASE_URL + '/users/' + authData.uid + '/events' );
+    var eventAry = $firebaseArray( userRef );
 
     eventAry.$loaded().then(function( data ) {
       $scope.events = eventAry;
@@ -20,7 +20,7 @@ myApp.controller('UserController',
        event.remove();
     }
 
-		$scope.addEvent = function() {
+    $scope.addEvent = function() {
       var myEvent = {
         creator: authData.uid,
         name: $scope.event.name,
@@ -36,8 +36,8 @@ myApp.controller('UserController',
         $('#eventModal').modal('hide');  
       });
     } // addevent
-	} else {
+  } else {
     $location.path('/');
   } // check authentication
 
-});
+}]);

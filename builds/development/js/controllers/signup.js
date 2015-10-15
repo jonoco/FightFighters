@@ -1,4 +1,4 @@
-myApp.controller('SignupController', function(
+myApp.controller('SignupController',[ '$scope', '$firebaseObject', '$location', '$routeParams', 'FIREBASE_URL', function(
 	$scope, $firebaseObject, $location, $routeParams, FIREBASE_URL) {
 
 	$scope.eventId = $routeParams.eventId;
@@ -28,5 +28,5 @@ myApp.controller('SignupController', function(
 			$scope.$apply();
 		});
 	};
-});
+}]);
 

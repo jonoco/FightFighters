@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', 
+myApp = angular.module('myApp', 
   ['ngRoute', 'firebase'])
   .constant('FIREBASE_URL', 'https://fightfighter.firebaseio.com/');
 
@@ -26,7 +26,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'views/register.html',
     controller:  'RegistrationController'
   })
-  .when('/event', {
+  .when('/directory', {
     templateUrl: 'views/directory.html',
     controller:  'DirectoryController'
   })

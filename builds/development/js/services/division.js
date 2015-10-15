@@ -1,4 +1,4 @@
-myApp.service('Division', 
+myApp.service('Division', [ '$firebaseObject', '$firebaseArray', 'FIREBASE_URL',
 	function( $firebaseObject, $firebaseArray, FIREBASE_URL ) {
 
 	function present(value, list) {
@@ -38,4 +38,4 @@ myApp.service('Division',
 
 	return myObject;
 
-});
+}]);

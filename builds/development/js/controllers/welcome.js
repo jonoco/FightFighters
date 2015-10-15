@@ -1,4 +1,4 @@
-myApp.controller('WelcomeController', 
+myApp.controller('WelcomeController', [ '$scope', '$location', 'bracketService',
 	function($scope, $location, bracketService) {
 
 	$scope.bracket = {
@@ -12,4 +12,4 @@ myApp.controller('WelcomeController',
 		$location.path('/bracket')
 	};
   
-});
+}]);

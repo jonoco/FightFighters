@@ -1,4 +1,4 @@
-myApp.factory('Authentication', 
+myApp.factory('Authentication', [ '$firebaseObject', '$firebaseAuth', 'FIREBASE_URL', '$rootScope', '$location',
   function( $firebaseObject, $firebaseAuth, FIREBASE_URL, $rootScope, $location ) {
 
   var ref = new Firebase( FIREBASE_URL );
@@ -48,4 +48,4 @@ myApp.factory('Authentication',
   } //myObject
 
   return myObject;
-});
+}]);

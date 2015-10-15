@@ -1,4 +1,4 @@
-myApp.controller('RegistrationController', 
+myApp.controller('RegistrationController', [ '$scope', '$location', 'Authentication',
   function($scope, $location, Authentication) {
 
     $scope.login = function() {
@@ -13,10 +13,10 @@ myApp.controller('RegistrationController',
     $scope.register = function() {
         Authentication.register($scope.user)
         .then(function(user) {
-        Authentication.login($scope.user);
-            $location.path('/user');
+          Authentication.login($scope.user);
+          $location.path('/user');
         }, function(error) {
-            $scope.message = error.toString();
+          $scope.message = error.toString();
       });
     } // register
 
@@ -26,4 +26,4 @@ myApp.controller('RegistrationController',
       }
     } // match
 
-}); //RegistrationController
+}]); //RegistrationController

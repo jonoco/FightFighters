@@ -1,5 +1,5 @@
-myApp.controller('EventController', function(
-	$scope, Division, $firebaseObject, $firebaseArray, Authentication, $firebaseAuth, $location, $routeParams, FIREBASE_URL) {
+myApp.controller('EventController', [ '$scope', 'Division', '$firebaseObject', '$firebaseArray', 'Authentication', '$firebaseAuth', '$location', '$routeParams', 'FIREBASE_URL',
+	function( $scope, Division, $firebaseObject, $firebaseArray, Authentication, $firebaseAuth, $location, $routeParams, FIREBASE_URL) {
 
 	$scope.eventId = $routeParams.eventId;
 	$scope.userId = $routeParams.userId;
@@ -27,4 +27,4 @@ myApp.controller('EventController', function(
 		//for each division that is being assigned, iter thru
 		//and find a bracket for each, marking division as status:assigned
 	}
-});
+}]);

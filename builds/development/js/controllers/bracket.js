@@ -1,6 +1,6 @@
-myApp.controller('BracketController', 
-	function($scope, bracketService) {
+myApp.controller('BracketController',['$scope', 'bracketService',
+ function($scope, bracketService) {
 	
 	$scope.bracket = bracketService.getBracket();
 	
-	});
+}]);

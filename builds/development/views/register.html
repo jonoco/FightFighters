@@ -22,7 +22,7 @@
         <input type="password" name="password" placeholder="Password" class="form-control" id="regPass"
           ng-model="user.password" ng-required="true">
         <p class="error"
-          ng-show="myform.password.$invalid && myform.password.$touched">password is required</p>
+          ng-show="myform.password.$invalid && myform.password.$touched">a password is required</p>
       </div>
 
       <div class="form-group">
@@ -30,7 +30,7 @@
         <input type="password" name="confirm" placeholder="Confirm password" class="form-control" id="regConfirm"
           ng-model="user.confirm" ng-required="true" compare-to="user.password">
         <p class="error"
-          ng-show="myform.confirm.$invalid && myform.confirm.$touched">passwords do not match</p>
+          ng-show="myform.confirm.$invalid && myform.confirm.$touched">the passwords do not match</p>
       </div>
 
       <button type="submit" class="btn btn-primary"

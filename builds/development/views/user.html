@@ -1,9 +1,16 @@
 <section>
 <div class="container">
 	<div class="user">
-		<h1>make a new event</h1>
-		<button class="btn btn-default" data-toggle="modal" data-target="#eventModal">New Event</button>	
-		<h2>my events</h2>
+		<h1>Make a new event</h1>
+		
+		<button class="btn btn-default" data-toggle="modal" data-target="#eventModal">
+			New Event
+		</button>
+
+		<h2>My events</h2>
+
+		<p class='no-events' ng-if="events.length < 1">Start by making a new event</p>
+
 		<div class="user-event" ng-repeat="event in events">
 			<a class="event-name" ng-href="#/event/{{userId}}/{{event.$id}}"><h3>{{event.name}}</h3></a>
 			<div class="button-group">

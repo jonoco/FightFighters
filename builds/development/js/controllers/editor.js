@@ -1,4 +1,4 @@
-myApp.controller('EditorController', function(
+myApp.controller('EditorController', [ '$scope', '$firebaseObject', '$firebaseArray', '$location', '$routeParams', 'Authentication', 'FIREBASE_URL', function(
 	$scope, $firebaseObject, $firebaseArray, $location, $routeParams, Authentication, FIREBASE_URL) {
 
 	$scope.eventId = $routeParams.eventId;
@@ -85,4 +85,4 @@ myApp.controller('EditorController', function(
 		else if ($scope.division.male) { return 'Male ' }
 		else { return 'Female ' }
 	}
-});
+}]);

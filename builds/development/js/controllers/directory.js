@@ -1,4 +1,4 @@
-myApp.controller('DirectoryController', 
+myApp.controller('DirectoryController', [ '$scope', '$firebaseObject', '$firebaseArray', '$location', 'FIREBASE_URL',
 	function( $scope, $firebaseObject, $firebaseArray, $location, FIREBASE_URL ) {
 
 	var ref = new Firebase( FIREBASE_URL + '/users' );
@@ -12,4 +12,4 @@ myApp.controller('DirectoryController',
 		$scope.directory = directory;
 	});
 
-});
+}]);
